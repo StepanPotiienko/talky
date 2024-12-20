@@ -1,13 +1,19 @@
-import { Text } from "react-native"
+import React from 'react';
+import { Text } from 'react-native';
+import Config from "react-native-config";
 
 const App = () => {
     return (
+        <>
+            <AppHeader />
+        </>
+    );
+};
+
+const AppHeader = () => (
     <>
-        <AppHeader />
+        <Text>{Config.APPLICATION_TITLE}</Text>
     </>
-    )
-}
+);
 
-const AppHeader = () => <div><Text>Header</Text></div>
-
-export default App
+export default App;
